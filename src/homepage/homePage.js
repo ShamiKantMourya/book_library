@@ -1,8 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { fakeFetch } from "../dataBase";
 import "../homepage/homePage.css";
 
 const IndividualBook = ({
@@ -55,12 +53,12 @@ const IndividualBook = ({
 const HomePage = (props) => {
   const { readbooks, changeCategory } = props;
   const continueReadBooks = readbooks?.filter(
-    (el) => el.category == "Continue Reading"
+    (el) => el.category === "Continue Reading"
   );
   const wantToReadBooks = readbooks?.filter(
-    (el) => el.category == "Want to read"
+    (el) => el.category === "Want to read"
   );
-  const read = readbooks?.filter((el) => el.category == "Read");
+  const read = readbooks?.filter((el) => el.category === "Read");
   return (
     <div>
       <div className="header">
