@@ -32,7 +32,7 @@ function App() {
   }, []);
   const changeCategory = (obj, categoryName) => {
     const newFilteredData = readbooks?.map((book) => {
-      if (book.id == obj.id) {
+      if (book.id === obj.id) {
         return { ...book, category: categoryName };
       } else {
         return book;
